@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Censo Bitcoin El Salvador</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <style>
+        html, body{
+            margin:0;
+            padding:0;
+            height:100%;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        #map{
+            width:100%;
+            height:100vh;
+        }
+
+        .titulo{
+            position:absolute;
+            top:15px;
+            left:50%;
+            transform:translateX(-50%);
+            z-index:1000;
+            background:white;
+            padding:10px 20px;
+            border-radius:10px;
+            box-shadow:0 2px 8px rgba(0,0,0,.2);
+            font-weight:bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="titulo">
+    Bitcoin Acceptance Census
+</div>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+
+const map = L.map('map').setView([13.7942,-88.8965],8);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+    attribution:'© OpenStreetMap'
+}).addTo(map);
+
+</script>
+
+</body>
+</html>
