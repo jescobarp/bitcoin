@@ -1,0 +1,1 @@
+Upload all files to GitHub repo root replacing index.html.
